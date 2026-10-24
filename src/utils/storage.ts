@@ -118,7 +118,7 @@ export function recordRunScore(entry: Omit<HighScoreEntry, "id" | "date">): {
 }
 
 export function updateLeaderboardEntryName(id: string, newName: string): HighScoreEntry[] {
-  const trimmed = newName.trim().slice(0, 18) || "Rafi";
+  const trimmed = newName.trim().slice(0, 18) || "Rahul";
   savePlayerName(trimmed);
   const current = loadLeaderboard().map((item) =>
     item.id === id ? { ...item, name: trimmed } : item
@@ -168,15 +168,15 @@ export function saveSoundMuted(muted: boolean): void {
 
 export function loadPlayerName(): string {
   try {
-    return localStorage.getItem(PLAYER_NAME_KEY) || "Rafi";
+    return localStorage.getItem(PLAYER_NAME_KEY) || "Rahul";
   } catch {
-    return "Rafi";
+    return "Rahul";
   }
 }
 
 export function savePlayerName(name: string): void {
   try {
-    localStorage.setItem(PLAYER_NAME_KEY, name.trim().slice(0, 18) || "Rafi");
+    localStorage.setItem(PLAYER_NAME_KEY, name.trim().slice(0, 18) || "Rahul");
   } catch {
     // ignore
   }

@@ -97,6 +97,7 @@ export const StartMenu: React.FC<StartMenuProps> = ({
             ESCAPE
           </span>
         </h1>
+        <p className="mt-2 text-sm font-extrabold tracking-wide text-amber-200 drop-shadow">🎮 Made by Rahul</p>
       </div>
 
       {/* Bottom Launch Panel */}
